@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,14 +17,133 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3W-em-ngk">
-                                <rect key="frame" x="20" y="44" width="374" height="380"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3W-em-ngk">
+                                <rect key="frame" x="20" y="64" width="374" height="621"/>
                                 <color key="backgroundColor" red="0.049160033376787822" green="0.12684276485515006" blue="0.23905834191212116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Blue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1N-Sc-91r">
+                                <rect key="frame" x="20" y="823" width="48" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="LlN-D5-lb6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.087141826713387938" green="0.21907844182248781" blue="0.43148409419191924" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4qZ-Fm-V5p">
+                                <rect key="frame" x="118" y="817" width="213" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
+                                <color key="maximumTrackTintColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY5-1z-Q1E">
+                                <rect key="frame" x="76" y="822" width="36" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="tFd-i6-4fO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hmc-KR-ZTd">
+                                <rect key="frame" x="337" y="815" width="57" height="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n4E-Qc-W8h">
+                                <rect key="frame" x="337" y="765" width="57" height="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rC7-9F-eFx">
+                                <rect key="frame" x="118" y="767" width="213" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
+                                <color key="maximumTrackTintColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzK-Z7-PXD">
+                                <rect key="frame" x="76" y="772" width="36" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="Gsi-dZ-7jb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Green:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EX3-CQ-wPm">
+                                <rect key="frame" x="20" y="772" width="48" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="Ceo-kI-Lcc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.087141826709999995" green="0.2190784418" blue="0.4314840942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Q6-nU-tcl">
+                                <rect key="frame" x="337" y="715" width="57" height="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-xg-JpG">
+                                <rect key="frame" x="118" y="717" width="213" height="31"/>
+                                <color key="minimumTrackTintColor" systemColor="systemPinkColor"/>
+                                <color key="maximumTrackTintColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAb-eX-CCd">
+                                <rect key="frame" x="76" y="722" width="36" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="36" id="ecj-89-SZs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Red:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAU-Ym-u6x">
+                                <rect key="frame" x="20" y="722" width="48" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="PZj-wJ-cmL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.087141826709999995" green="0.2190784418" blue="0.4314840942" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.036773496070000002" green="0.088323479600000004" blue="0.17049529999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="RzK-Z7-PXD" firstAttribute="leading" secondItem="EX3-CQ-wPm" secondAttribute="trailing" constant="8" id="161-Vb-4vV"/>
+                            <constraint firstItem="rC7-9F-eFx" firstAttribute="leading" secondItem="RzK-Z7-PXD" secondAttribute="trailing" constant="8" id="3we-hg-lhL"/>
+                            <constraint firstItem="kAU-Ym-u6x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="65y-TF-EbD"/>
+                            <constraint firstItem="n4E-Qc-W8h" firstAttribute="top" secondItem="5Q6-nU-tcl" secondAttribute="bottom" constant="16" id="BP2-qd-avQ"/>
+                            <constraint firstItem="Hmc-KR-ZTd" firstAttribute="top" secondItem="n4E-Qc-W8h" secondAttribute="bottom" constant="16" id="C3i-kg-7Xj"/>
+                            <constraint firstItem="EX3-CQ-wPm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D9u-3e-QL9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n4E-Qc-W8h" secondAttribute="trailing" constant="20" id="FO5-uh-gZj"/>
+                            <constraint firstItem="xP9-xg-JpG" firstAttribute="leading" secondItem="bAb-eX-CCd" secondAttribute="trailing" constant="8" id="K6C-hc-E1g"/>
+                            <constraint firstItem="E1N-Sc-91r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MO4-7w-Mfa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E1N-Sc-91r" secondAttribute="bottom" constant="20" id="N20-AD-VVv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XY5-1z-Q1E" secondAttribute="bottom" constant="20" id="NDd-9q-zZH"/>
+                            <constraint firstItem="g3W-em-ngk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QvS-fU-a2I"/>
+                            <constraint firstItem="bAb-eX-CCd" firstAttribute="leading" secondItem="kAU-Ym-u6x" secondAttribute="trailing" constant="8" id="Tnb-nP-gsM"/>
+                            <constraint firstItem="g3W-em-ngk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UHv-ni-jhD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hmc-KR-ZTd" secondAttribute="bottom" constant="13" id="WHJ-Ei-SCz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hmc-KR-ZTd" secondAttribute="trailing" constant="20" id="X4C-SF-nKT"/>
+                            <constraint firstItem="EX3-CQ-wPm" firstAttribute="top" secondItem="kAU-Ym-u6x" secondAttribute="bottom" constant="31" id="cIo-HX-yfg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Q6-nU-tcl" secondAttribute="trailing" constant="20" id="ccd-QT-hEk"/>
+                            <constraint firstItem="5Q6-nU-tcl" firstAttribute="leading" secondItem="xP9-xg-JpG" secondAttribute="trailing" constant="8" id="dl0-Gi-rdR"/>
+                            <constraint firstItem="RzK-Z7-PXD" firstAttribute="top" secondItem="bAb-eX-CCd" secondAttribute="bottom" constant="30" id="f0A-na-3e0"/>
+                            <constraint firstItem="XY5-1z-Q1E" firstAttribute="top" secondItem="RzK-Z7-PXD" secondAttribute="bottom" constant="30" id="fim-9o-GNm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4qZ-Fm-V5p" secondAttribute="bottom" constant="15" id="g70-N3-xuu"/>
+                            <constraint firstItem="n4E-Qc-W8h" firstAttribute="leading" secondItem="rC7-9F-eFx" secondAttribute="trailing" constant="8" id="jOK-of-7LW"/>
+                            <constraint firstItem="4qZ-Fm-V5p" firstAttribute="leading" secondItem="XY5-1z-Q1E" secondAttribute="trailing" constant="8" id="jTt-ZI-qcd"/>
+                            <constraint firstItem="4qZ-Fm-V5p" firstAttribute="top" secondItem="rC7-9F-eFx" secondAttribute="bottom" constant="20" id="lN6-Px-157"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g3W-em-ngk" secondAttribute="trailing" constant="20" id="mTu-oX-RlU"/>
+                            <constraint firstItem="Hmc-KR-ZTd" firstAttribute="leading" secondItem="4qZ-Fm-V5p" secondAttribute="trailing" constant="8" id="mcf-dm-E7U"/>
+                            <constraint firstItem="XY5-1z-Q1E" firstAttribute="leading" secondItem="E1N-Sc-91r" secondAttribute="trailing" constant="8" id="qj8-Sw-F4q"/>
+                            <constraint firstItem="E1N-Sc-91r" firstAttribute="top" secondItem="EX3-CQ-wPm" secondAttribute="bottom" constant="32" id="rvs-6e-u5O"/>
+                            <constraint firstItem="5Q6-nU-tcl" firstAttribute="top" secondItem="g3W-em-ngk" secondAttribute="bottom" constant="30" id="wz9-2F-xZt"/>
+                            <constraint firstItem="rC7-9F-eFx" firstAttribute="top" secondItem="xP9-xg-JpG" secondAttribute="bottom" constant="20" id="xm7-su-Xeq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -31,4 +151,15 @@
             <point key="canvasLocation" x="131.8840579710145" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
