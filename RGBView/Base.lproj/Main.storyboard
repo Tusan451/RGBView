@@ -81,7 +81,8 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Q6-nU-tcl">
                                 <rect key="frame" x="337" y="715" width="57" height="34"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.019074744150004048" green="0.047620002862854387" blue="0.091784357103030456" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -145,6 +146,10 @@
                             <constraint firstItem="rC7-9F-eFx" firstAttribute="top" secondItem="xP9-xg-JpG" secondAttribute="bottom" constant="20" id="xm7-su-Xeq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainView" destination="g3W-em-ngk" id="1Jo-1x-j32"/>
+                        <outlet property="redTextField" destination="5Q6-nU-tcl" id="w6q-MG-uqX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
