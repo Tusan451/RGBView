@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet var greenSlider: UISlider!
+    @IBOutlet var greenTextLabel: UILabel!
     @IBOutlet var greenTextField: UITextField! {
         didSet {
             let grayPlaceHolderText = NSAttributedString(string: "0.00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
@@ -29,6 +31,8 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet var blueSlider: UISlider!
+    @IBOutlet var blueTextLabel: UILabel!
     @IBOutlet var blueTextField: UITextField! {
         didSet {
             let grayPlaceHolderText = NSAttributedString(string: "0.00", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
@@ -37,23 +41,45 @@ class ViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         // Setup mainView corner radius
         mainView.layer.cornerRadius = 20
-        
     }
     
     @IBAction func redSliderChanged(_ sender: UISlider) {
-        let sliderValue = Int(redSlider.value)
-        redTextLabel.text = String(sliderValue)
-        redTextField.text = String(sliderValue)
+        let redValue = Int(redSlider.value)
+        let greenValue = Int(greenSlider.value)
+        let blueValue = Int(blueSlider.value)
         
-        mainView.backgroundColor = UIColor(red: CGFloat(sliderValue) / 255, green: 0, blue: 0, alpha: 1)
+        redTextLabel.text = String(redValue)
+        redTextField.text = String(redValue)
+        
+        mainView.backgroundColor = UIColor(red: CGFloat(redValue) / 255, green: CGFloat(greenValue) / 255, blue: CGFloat(blueValue) / 255, alpha: 1)
     }
     
+    @IBAction func greenSliderChanged(_ sender: UISlider) {
+        let redValue = Int(redSlider.value)
+        let greenValue = Int(greenSlider.value)
+        let blueValue = Int(blueSlider.value)
+        
+        greenTextLabel.text = String(greenValue)
+        greenTextField.text = String(greenValue)
+        
+        mainView.backgroundColor = UIColor(red: CGFloat(redValue) / 255, green: CGFloat(greenValue) / 255, blue: CGFloat(blueValue) / 255, alpha: 1)
+    }
+    
+    @IBAction func blueSliderChanged(_ sender: UISlider) {
+        let redValue = Int(redSlider.value)
+        let greenValue = Int(greenSlider.value)
+        let blueValue = Int(blueSlider.value)
+        
+        blueTextLabel.text = String(blueValue)
+        blueTextField.text = String(blueValue)
+        
+        mainView.backgroundColor = UIColor(red: CGFloat(redValue) / 255, green: CGFloat(greenValue) / 255, blue: CGFloat(blueValue) / 255, alpha: 1)
+    }
 }
 

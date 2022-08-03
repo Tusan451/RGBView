@@ -30,10 +30,13 @@
                                 <color key="textColor" red="0.087141826713387938" green="0.21907844182248781" blue="0.43148409419191924" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4qZ-Fm-V5p">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="4qZ-Fm-V5p">
                                 <rect key="frame" x="118" y="817" width="213" height="31"/>
                                 <color key="minimumTrackTintColor" systemColor="systemBlueColor"/>
                                 <color key="maximumTrackTintColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="blueSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="KKF-cs-cgt"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XY5-1z-Q1E">
                                 <rect key="frame" x="76" y="822" width="36" height="20"/>
@@ -58,10 +61,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rC7-9F-eFx">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="rC7-9F-eFx">
                                 <rect key="frame" x="118" y="767" width="213" height="31"/>
                                 <color key="minimumTrackTintColor" systemColor="systemGreenColor"/>
                                 <color key="maximumTrackTintColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="greenSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="k0a-Iu-nTN"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzK-Z7-PXD">
                                 <rect key="frame" x="76" y="772" width="36" height="20"/>
@@ -93,7 +99,7 @@
                                 <color key="minimumTrackTintColor" systemColor="systemPinkColor"/>
                                 <color key="maximumTrackTintColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
-                                    <action selector="redSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Itc-Om-saV"/>
+                                    <action selector="redSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="KYE-NP-Vzy"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAb-eX-CCd">
@@ -106,7 +112,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Red:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAU-Ym-u6x">
-                                <rect key="frame" x="20" y="722" width="48" height="19"/>
+                                <rect key="frame" x="20" y="723" width="48" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="PZj-wJ-cmL"/>
                                 </constraints>
@@ -134,7 +140,7 @@
                             <constraint firstItem="g3W-em-ngk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UHv-ni-jhD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hmc-KR-ZTd" secondAttribute="bottom" constant="13" id="WHJ-Ei-SCz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hmc-KR-ZTd" secondAttribute="trailing" constant="20" id="X4C-SF-nKT"/>
-                            <constraint firstItem="EX3-CQ-wPm" firstAttribute="top" secondItem="kAU-Ym-u6x" secondAttribute="bottom" constant="31" id="cIo-HX-yfg"/>
+                            <constraint firstItem="EX3-CQ-wPm" firstAttribute="top" secondItem="kAU-Ym-u6x" secondAttribute="bottom" constant="30" id="cIo-HX-yfg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Q6-nU-tcl" secondAttribute="trailing" constant="20" id="ccd-QT-hEk"/>
                             <constraint firstItem="5Q6-nU-tcl" firstAttribute="leading" secondItem="xP9-xg-JpG" secondAttribute="trailing" constant="8" id="dl0-Gi-rdR"/>
                             <constraint firstItem="RzK-Z7-PXD" firstAttribute="top" secondItem="bAb-eX-CCd" secondAttribute="bottom" constant="30" id="f0A-na-3e0"/>
@@ -152,8 +158,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueSlider" destination="4qZ-Fm-V5p" id="efh-vb-M5N"/>
                         <outlet property="blueTextField" destination="Hmc-KR-ZTd" id="BQt-5A-cDK"/>
+                        <outlet property="blueTextLabel" destination="XY5-1z-Q1E" id="oaZ-K7-deT"/>
+                        <outlet property="greenSlider" destination="rC7-9F-eFx" id="h6H-fW-tko"/>
                         <outlet property="greenTextField" destination="n4E-Qc-W8h" id="8my-5h-58j"/>
+                        <outlet property="greenTextLabel" destination="RzK-Z7-PXD" id="kRm-e5-wnU"/>
                         <outlet property="mainView" destination="g3W-em-ngk" id="1Jo-1x-j32"/>
                         <outlet property="redSlider" destination="xP9-xg-JpG" id="o7f-yv-OUW"/>
                         <outlet property="redTextField" destination="5Q6-nU-tcl" id="w6q-MG-uqX"/>
