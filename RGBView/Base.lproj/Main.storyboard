@@ -46,12 +46,14 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hmc-KR-ZTd">
                                 <rect key="frame" x="337" y="815" width="57" height="34"/>
+                                <color key="backgroundColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n4E-Qc-W8h">
                                 <rect key="frame" x="337" y="765" width="57" height="34"/>
+                                <color key="backgroundColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -81,15 +83,18 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Q6-nU-tcl">
                                 <rect key="frame" x="337" y="715" width="57" height="34"/>
-                                <color key="backgroundColor" red="0.019074744150004048" green="0.047620002862854387" blue="0.091784357103030456" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-xg-JpG">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-xg-JpG">
                                 <rect key="frame" x="118" y="717" width="213" height="31"/>
                                 <color key="minimumTrackTintColor" systemColor="systemPinkColor"/>
                                 <color key="maximumTrackTintColor" red="0.050980389119999997" green="0.12549020350000001" blue="0.23921570180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="redSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Itc-Om-saV"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAb-eX-CCd">
                                 <rect key="frame" x="76" y="722" width="36" height="20"/>
@@ -147,8 +152,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueTextField" destination="Hmc-KR-ZTd" id="BQt-5A-cDK"/>
+                        <outlet property="greenTextField" destination="n4E-Qc-W8h" id="8my-5h-58j"/>
                         <outlet property="mainView" destination="g3W-em-ngk" id="1Jo-1x-j32"/>
+                        <outlet property="redSlider" destination="xP9-xg-JpG" id="o7f-yv-OUW"/>
                         <outlet property="redTextField" destination="5Q6-nU-tcl" id="w6q-MG-uqX"/>
+                        <outlet property="redTextLabel" destination="bAb-eX-CCd" id="J9U-iM-5zQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
